@@ -16,31 +16,38 @@ const quotes = [
     quote: "Float like a butterfly, sting like a bee.",
     source: "Muhammad Ali",
     citation: "WJZ CBS Baltimore",
-    year: "1964"  
+    year: "1964",
+    role: "Professional Boxer"
+    
   },
   {
     quote: "Say 'hello' to my little friend!",
     source: "Tony Montana",
     citation: "Scarface",
-    year: "1983"
+    year: "1983",
+    role:"Cuban Refugee"
+    
   },
   {
     quote: "Come on, Let's get serious.",
     source: "Arnold Schwarzenegger",
     citation: "Pumping Iron",
-    year: "1977"
+    year: "1977",
+    role: "BodyBuilder"
   },
   {
     quote: "It's a lot more than mind over matter. It takes relentless self discipline to schedule suffering into your day, every day.",
     source: "David Goggins",
     citation: "Can't Hurt Me",
-    year: "2018"
+    year: "2018",
+    role: "Ultra Marathon Runner"
   },
   {
     quote: "Don't worry about a thing cause every little thing gonna be all right.",
     source: "Bob Marley",
     citation: "Three Little Birds",
-    year: "1997"
+    year: "1997",
+    role: "Singer-Songwriter"
   }
 ];
 
@@ -69,11 +76,6 @@ function getRandomQuote(quotes) {
 };
 for (i = 0; i < quotes.length; i++);
 
-// Run console log to see if it works properly 
-{
-  console.log(getRandomQuote(quotes))
-};
-
 /***
  * `printQuote` function
 ***/
@@ -91,6 +93,11 @@ function printQuote(){
   if (randomQuote.year){
     htmlQuote += `<span class="year">${randomQuote.year}`
   }
+  if (randomQuote.role){
+    htmlQuote += `<span class="role">${
+      randomQuote.role}`
+  }
+
   
   htmlQuote += `</p>`;
 
